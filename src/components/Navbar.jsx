@@ -15,14 +15,14 @@ const Navbar = () => {
   
           {/* Desktop Navigation */}
           <ul className="hidden md:flex space-x-6 text-[#204714]"> {/* Updated text color */}
-            <li><a href="#" className="hover:text-green-700">Home</a></li>
-            <li><a href="#" className="hover:text-green-700">Features</a></li>
-            <li><a href="#" className="hover:text-green-700">Pricing</a></li>
-            <li><a href="#" className="hover:text-green-700">Contact</a></li>
+            <li><a href="#" className="hover:text-green-700">Basics</a></li>
+            <li><a href="#" className="hover:text-green-700">About Us</a></li>
+            <li><a href="#" className="hover:text-green-700">Testimonials</a></li>
+            <li><a href="#" className="hover:text-green-700">Financial Roadmap</a></li>
           </ul>
   
           {/* Start Now Button */}
-          <a href="#" className="hidden md:block bg-[#204714] text-white px-5 py-2 rounded-lg hover:bg-green-800">
+          <a href="#" className="hidden md:block bg-[#204714] text-white px-5 py-2 rounded-full hover:bg-green-800">
             Start Now
           </a>
   

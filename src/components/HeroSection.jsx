@@ -27,11 +27,11 @@ const HeroSection = () => {
             <div>
                 <div className="flex items-center text-red-500">
                 {Array(4).fill(0).map((_, idx) => (
-                    <span key={idx}>★</span>
+                    <span className='text-4xl' key={idx}>★</span>
                 ))}
-                <span className="text-red-500">☆</span>
+                <span className="text-red-500 text-4xl">☆</span>
                 </div>
-                <p className="text-sm font-semibold">
+                <p className="text-lg font-semibold">
                 (73.2%) of people <br /> have some type of <br /> outstanding debt
                 </p>
             </div>
@@ -50,19 +50,19 @@ const HeroSection = () => {
         {/* Right Side */}
         <div className="flex flex-col justify-between space-y-6 max-w-sm h-[70vh]">
             <div>
-                <p className="text-[#204714]">
-                Hi my name is Carl and I will <br /> help you get your Early <br /> Financial Freedom Plan <br />(EFFP)
+                <p className="text-[#204714] text-xl">
+                Hi my name is Marco and I will <br /> help you get your Early <br /> Financial Freedom Plan <br />(EFFP)
                 </p>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2 mt-10 border-b-1 pb-2">
                     <Mail className="text-green-700" />
-                    <span className="font-semibold text-green-700">help@cheqpro.com</span>
+                    <span className="font-semibold text-[#204714] text-2xl">help@cheqpro.com</span>
                 </div>
             </div>    
 
             {/* Testimonial */}
             <div className="flex items-center space-x-4 mt-10">
-            <p className="italic text-sm text-gray-600">
-                “Will helped you reach financial freedom”
+            <p className="italic text-lg text-[#204714]">
+                “Will helped you reach <br />financial freedom”
             </p>
             </div>
         </div>

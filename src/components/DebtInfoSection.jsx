@@ -7,8 +7,8 @@ import money4 from '../assets/money1.png';
 
 const DebtInfoSection = () => {
   return (
-    <section className='w-full bg-gray-50'>
-      <div className="container mx-auto flex flex-col items-center justify-center text-center px-8 py-20 relative mt-16">
+    <section className='w-full'>
+      <div className="container mx-auto flex flex-col items-center justify-center text-center px-8 py-20 relative">
         {/* Floating Icons */}
         <img src={money1} alt="Money" className="absolute top-10 left-10 w-10 h-10 animate-float" />
         <img src={money2} alt="Coins" className="absolute bottom-10 right-20 w-10 h-10 animate-float" />
