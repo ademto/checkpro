@@ -5,6 +5,8 @@ import Basics from "./pages/Basics";
 import About from "./pages/About";
 import Testimonials from "./pages/Testimonials";
 import FinancialRoadmap from "./pages/FinancialRoadmap";
+import Dashboard from "./pages/Dashboard.jsx";
+import LoginPage from "./pages/login.jsx";
 import { FooterWithSocialLinks } from './components/Footer.jsx'
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/financial-roadmap" element={<FinancialRoadmap />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
       </div>
       <FooterWithSocialLinks />
