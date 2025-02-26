@@ -1,24 +1,42 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/cheq-logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const user = { name: "Marco" }; // Replace with authentication logic
+  const [user, setUser] = useState(null);
+
+  // Simulate authentication check
+  useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem("user")); // Replace with actual auth logic
+    if (storedUser) {
+      setUser(storedUser);
+    }
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("user"); // Clear user session
+    setUser(null);
+  };
 
   return (
     <nav className="bg-white shadow-md fixed w-full top-0 left-0 z-50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         
-        {/* Logo (Always on the left) */}
+        {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
           <img src={logo} alt="Logo" className="h-18 w-auto" />
         </Link>
 
-        {/* If user is signed in, show "Hi, User" on the right */}
         {user ? (
-          <div className="text-[#204714] font-semibold">
-            Hi, {user.name}
+          <div className="flex items-center space-x-4">
+            <span className="text-[#204714] font-semibold">Hi, {user.name}</span>
+            <button
+              onClick={handleLogout}
+              className="bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-700"
+            >
+              Logout
+            </button>
           </div>
         ) : (
           <>
@@ -46,7 +64,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu (only if user is not signed in) */}
+      {/* Mobile Menu */}
       {!user && isOpen && (
         <ul className="md:hidden bg-white py-4 text-center space-y-4 shadow-md">
           <li><Link to="/basics" className="block text-[#204714] hover:text-green-700">Basics</Link></li>

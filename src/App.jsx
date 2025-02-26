@@ -6,7 +6,13 @@ import About from "./pages/About";
 import Testimonials from "./pages/Testimonials";
 import FinancialRoadmap from "./pages/FinancialRoadmap";
 import Dashboard from "./pages/Dashboard.jsx";
-import LoginPage from "./pages/login.jsx";
+import { LoginPage } from "./pages/register.jsx";
+import { NameEntryPage } from "./pages/register.jsx";
+import { ConfirmationPage } from "./pages/register.jsx";
+import SignUpQuestion from "./pages/SignUpQuestions.jsx";
+import VerificationPage from "./pages/verification.jsx";
+import WelcomeScreen from "./pages/welcome.jsx";
+import MultiStepForm from "./pages/form.jsx";
 import { FooterWithSocialLinks } from './components/Footer.jsx'
 
 function App() {
@@ -21,7 +27,13 @@ function App() {
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/financial-roadmap" element={<FinancialRoadmap />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/name" element={<NameEntryPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/confirm" element={<ConfirmationPage />} />
+          <Route path="/verification" element={<VerificationPage />} />
+          <Route path="/welcome" element={<WelcomeScreen />} />
+          <Route path="/question" element={<SignUpQuestion />} />
+          <Route path="/form" element={<MultiStepForm />} />
         </Routes>
       </div>
       <FooterWithSocialLinks />
