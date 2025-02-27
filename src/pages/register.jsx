@@ -5,7 +5,7 @@ import coins from '../assets/coins.png';
 import money from '../assets/money.png';
 import logo from "../assets/cheq-logo.png";
 
-const LoginPage = () => {
+const LoginPaged = () => {
     return (
       <div className="flex min-h-screen items-center justify-center bg-gray-100">
         <div className="bg-white rounded-lg shadow-lg flex max-w-6xl w-full">
@@ -89,4 +89,4 @@ const ConfirmationPage = () => {
   );
 };
 
-export { LoginPage, NameEntryPage, ConfirmationPage };
+export { LoginPaged, NameEntryPage, ConfirmationPage };

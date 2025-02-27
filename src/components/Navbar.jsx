@@ -6,12 +6,21 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [user, setUser] = useState(null);
 
+  // Safe function to get user from localStorage
+  const getUserFromLocalStorage = () => {
+    try {
+      const storedUser = localStorage.getItem("user");
+      if (!storedUser || storedUser === "undefined") return null; // Prevent parsing errors
+      return JSON.parse(storedUser);
+    } catch (error) {
+      console.error("Error parsing user data from localStorage:", error);
+      return null;
+    }
+  };
+
   // Simulate authentication check
   useEffect(() => {
-    const storedUser = JSON.parse(localStorage.getItem("user")); // Replace with actual auth logic
-    if (storedUser) {
-      setUser(storedUser);
-    }
+    setUser(getUserFromLocalStorage());
   }, []);
 
   const handleLogout = () => {
