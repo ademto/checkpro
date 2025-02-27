@@ -1,68 +1,26 @@
-import { useState, useContext } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../context/AuthContext";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
 
   const navigate = useNavigate();
-  const { dispatch } = useContext(AuthContext);
 
-  const handleLogin = async (e) => {
+  const handleLogin = (e) => {
     e.preventDefault();
-    setError(null);
-    setLoading(true);
-
-    try {
-      const response = await fetch("http://localhost:5000/auth/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
-        credentials: "include", // ✅ Ensure cookies are sent
-      });
-
-      if (!response.ok) {
-        const data = await response.json();
-        setError(data.message || "Invalid credentials.");
-        setLoading(false);
-        return;
-      }
-
-      // ✅ Fetch user data from /auth/me
-      const userResponse = await fetch("http://localhost:5000/auth/me", {
-        method: "GET",
-        credentials: "include",
-      });
-
-      const userData = await userResponse.json();
-      setLoading(false);
-
-      if (userResponse.ok) {
-        // ✅ Update AuthContext
-        dispatch({ type: "LOGIN", payload: userData });
-
-        // ✅ Redirect based on verification status
-        navigate(userData.verified ? "/dashboard" : "/question");
-      } else {
-        setError("Failed to fetch user data.");
-      }
-    } catch (error) {
-      setError("Something went wrong. Please try again.");
-      setLoading(false);
-    }
+    // Redirect to /question without backend authentication
+    navigate("/question");
   };
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-100">
       <div className="bg-white rounded-lg shadow-lg flex max-w-6xl w-full">
         {/* Left Column - Form */}
-        <div className="w-1/3 p-8">
-          <h2 className="text-2xl font-semibold text-gray-800">Welcome Back, Please login to your account</h2>
-
-          {error && <p className="text-red-600 text-sm mt-2">{error}</p>}
+        <div className="w-1/2 p-8">
+          <h2 className="text-2xl font-semibold text-gray-800">
+            Welcome Back, Please login to your account
+          </h2>
 
           <form onSubmit={handleLogin}>
             <label className="block text-gray-600">Email Address</label>
@@ -88,12 +46,17 @@ const LoginPage = () => {
             <button
               type="submit"
               className="w-full mt-4 py-2 bg-green-700 text-white rounded-lg hover:bg-green-800"
-              disabled={loading}
             >
-              {loading ? "Logging in..." : "Login"}
+              Login
             </button>
           </form>
         </div>
+
+        {/* Right Column - Full Image */}
+        <div
+          className="w-1/2 h-auto bg-cover bg-center"
+          style={{ backgroundImage: "url('/path-to-your-image.jpg')" }}
+        ></div>
       </div>
     </div>
   );
