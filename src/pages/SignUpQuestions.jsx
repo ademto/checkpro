@@ -196,7 +196,7 @@ const SignUpQuestion = () => {
             <>
               <h2 className="text-lg font-semibold mb-4">Enter the amount saved up for emergencies</h2>
               <Input value={emergencyFund} onChange={(e) => setEmergencyFund(e.target.value)} />
-              <Button onClick={() => { setEmergencyFund("0"); handleNext(); }}>Set to 0</Button>
+              <Button className="mt-5" onClick={() => { setEmergencyFund("0"); handleNext(); }}>Set to 0</Button>
             </>
           )}
 
@@ -204,7 +204,7 @@ const SignUpQuestion = () => {
             <>
               <h2 className="text-lg font-semibold mb-4">Do you have any debt?</h2>
               <Input value={debt} onChange={(e) => setDebt(e.target.value)} />
-              <Button onClick={() => { setDebt("0"); handleNext(); }}>Set to 0</Button>
+              <Button className="mt-5" onClick={() => { setDebt("0"); handleNext(); }}>Set to 0</Button>
             </>
           )}
 
