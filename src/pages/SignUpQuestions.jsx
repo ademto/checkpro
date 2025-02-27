@@ -1,6 +1,18 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import money1 from "../assets/money.png";
+import man from "../assets/man.png";
+import biweekly from "../assets/bi-weekly.png";
+import mortgage from "../assets/mortgage.png";
+import rent from "../assets/rent.png";
+import employed from "../assets/employed.png";
+import unemployed from "../assets/unemployed.png";
+import ring from "../assets/ring.png";
+import investment from "../assets/investment.png";
+import budgeting from "../assets/budgeting.png";
+import blank from "../assets/blank.png";
+import children from "../assets/children.png";
+import monthly from "../assets/monthly.png";
 
 // ✅ Custom Button Component
 const Button = ({ onClick, children, className = "" }) => (
@@ -28,21 +40,21 @@ const questions = [
     text: "What's most important to you right now?", 
     desc: "Choose all that apply", 
     options: ["Savings", "Budgeting", "Investing"],
-    images: [money1, money1, money1] 
+    images: [money1, budgeting, investment] 
   },
   { 
     id: 2, 
     text: "How old are you?", 
     desc: "Select the age bracket you fall under", 
     options: ["18-25", "26-35", "36-55", "55+"],
-    images: [money1, money1, money1, money1] 
+    images: [man, man, man, man] 
   },
   { 
     id: 3, 
     text: "What is your employment status?", 
     desc: "Are you Employed or Unemployed", 
     options: ["Employed", "Unemployed"],
-    images: [money1, money1] 
+    images: [employed, unemployed] 
   },
   { 
     id: 4, 
@@ -54,9 +66,9 @@ const questions = [
       "Children": ["Children", "No Children"]
     },
     images: {
-      "Relationship Status": [money1, money1], 
-      "Living Situation": [money1, money1], 
-      "Children": [money1, money1] 
+      "Relationship Status": [ring, blank], 
+      "Living Situation": [mortgage, rent], 
+      "Children": [children, blank] 
     }
   },
   { 
@@ -64,7 +76,7 @@ const questions = [
     text: "How often do you get paid?", 
     desc: "Click what applies", 
     options: ["Weekly", "Bi-Weekly", "Monthly"],
-    images: [money1, money1, money1] 
+    images: [employed, biweekly, monthly] 
   }
 ];
 
@@ -140,7 +152,7 @@ const SignUpQuestion = () => {
                           }`}
                           onClick={() => handleSelect(4, category, option)}
                         >
-                          <img src={questions[step].images[category][index]} alt={option} className="w-full h-32 object-cover rounded-t-2xl" />
+                          <img src={questions[step].images[category][index]} alt={option} className="object-cover rounded-t-2xl" />
                           <h3 className="text-xl font-bold mt-2">{option}</h3>
                         </div>
                       ))}
@@ -156,7 +168,7 @@ const SignUpQuestion = () => {
                       className="bg-white shadow-lg text-center rounded-2xl overflow-hidden cursor-pointer transition-transform hover:scale-105 p-4 flex flex-col items-center"
                       onClick={() => handleSelect(questions[step].id, null, option)}
                     >
-                      <img src={questions[step].images[index]} alt={option} className="w-full h-32 object-cover rounded-t-2xl" />
+                      <img src={questions[step].images[index]} alt={option} className="w-[150px] object-cover rounded-t-2xl" />
                       <h3 className="text-xl font-bold mt-2">{option}</h3>
                     </div>
                   ))}

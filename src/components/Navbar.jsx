@@ -58,9 +58,14 @@ const Navbar = () => {
             </ul>
 
             {/* Start Now Button */}
-            <Link to="/dashboard" className="hidden md:block bg-[#204714] text-white px-5 py-2 rounded-full hover:bg-green-800">
-              Start Now
-            </Link>
+            <div className="flex">
+              <Link to="/login" className="hidden md:block text-[#204714] px-5 py-2 rounded-full">
+                Log in
+              </Link>
+              <Link to="/signup" className="hidden md:block bg-[#204714] text-white px-5 py-2 rounded-full hover:bg-green-800">
+                Start Now
+              </Link>
+            </div>
           </>
         )}
 

@@ -37,11 +37,12 @@ function App() {
           <Route path="/question" element={<SignUpQuestion />} />
           <Route path="/form" element={<MultiStepForm />} />
           <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/dashboard" element={<Dashboard />} />
 
           {/* Protect the dashboard route */}
-          <Route path="/" element={<PrivateRoute />}>
+          {/* <Route path="/" element={<PrivateRoute />}>
             <Route path="/dashboard" element={<Dashboard />} />
-          </Route>
+          </Route> */}
         </Routes>
       </div>
       <FooterWithSocialLinks />

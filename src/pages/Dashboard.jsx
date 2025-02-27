@@ -17,7 +17,6 @@ const sections = [
   "EMERGENCY FUNDS",
   "FINANCIAL ROADMAP",
   "E - LEARNING",
-  "SIGN-UP"
 ];
 
 const FinancialDashboard = () => {
