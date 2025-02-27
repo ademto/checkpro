@@ -16,6 +16,7 @@ import WelcomeScreen from "./pages/welcome.jsx";
 import MultiStepForm from "./pages/form.jsx";
 import { FooterWithSocialLinks } from "./components/Footer.jsx";
 import { AuthProvider } from "./context/AuthContext.jsx"; 
+import BudgetInsight from "./pages/BudgetInsight.jsx";
 import PrivateRoute from "./components/PrivateRoute"; // Import PrivateRoute
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
           <Route path="/form" element={<MultiStepForm />} />
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/budget" element={<BudgetInsight />} />
 
           {/* Protect the dashboard route */}
           {/* <Route path="/" element={<PrivateRoute />}>

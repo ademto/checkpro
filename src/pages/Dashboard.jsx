@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import money1 from '../assets/money.png';
 import { PieChart, Pie, Cell, Tooltip } from "recharts";
-import { UserCircle } from "lucide-react";
+import FinancialRoadmap from "./FinancialRoadmap";
+import BudgetInsight from "./BudgetInsight";
+import EmergencyFunds from "./Emergency";
 
 const data = [
   { name: "Expenses", value: 5200, color: "#00A8E8" },
@@ -23,11 +24,11 @@ const FinancialDashboard = () => {
   const [activeSection, setActiveSection] = useState("DASHBOARD");
 
   return (
-    <div className="container mx-auto py-12 px-6 rounded-lg">
+    <div className="max-w-7xl mx-auto py-12 px-6 rounded-lg">
       {/* Dashboard Layout */}
       <div className="grid md:grid-cols-4 gap-6 mt-6">
         {/* Sidebar Menu */}
-        <div className="space-y-4 text-green-800 font-semibold border-r pr-4">
+        <div className="space-y-4 text-green-800 font-semibold border-r pr-4 text-lg">
           {sections.map((section) => (
             <p
               key={section}
@@ -93,29 +94,23 @@ const FinancialDashboard = () => {
               </div>
             </>
           )}
-          {activeSection === "SIGN-UP" && (
-            <>
-              <div>
-                <h3 className="font-bold text-3xl">What's most important to you right now?</h3>
-                <p className="font-semibold">Choose all that apply</p>
-                
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {cards.map((card, index) => (
-                <div key={index} className="bg-white shadow-lg rounded-2xl overflow-hidden">
-                  <img src={card.image} alt={card.title} className="w-full h-48 object-cover" />
-                  <div className="p-4">
-                    <h3 className="text-xl font-bold mb-2">{card.title}</h3>
-                    <p className="text-gray-600">{card.description}</p>
-                  </div>
-                </div>
-              ))}
-      </div>
-            </>
-          )}
-          {activeSection !== "DASHBOARD" && (
-            <div className="text-green-800 font-bold text-xl">{activeSection} SECTION</div>
-          )}
+
+          {/* Financial Roadmap Section */}
+          {activeSection === "FINANCIAL ROADMAP" && <FinancialRoadmap />}
+
+          {/* Budget Insights Section */}
+          {activeSection === "BUDGET INSIGHTS" && <BudgetInsight />}
+
+          {/* Budget Insights Section */}
+          {activeSection === "EMERGENCY FUNDS" && <EmergencyFunds />}
+
+          {/* Placeholder for other sections */}
+          {activeSection !== "DASHBOARD" &&
+            activeSection !== "FINANCIAL ROADMAP" &&
+            activeSection !== "BUDGET INSIGHTS" && 
+            activeSection !== "EMERGENCY FUNDS" && (
+              <div className="text-green-800 font-bold text-xl">{activeSection} SECTION</div>
+            )}
         </div>
       </div>
     </div>
