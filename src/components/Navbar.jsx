@@ -58,7 +58,7 @@ const Navbar = () => {
             </ul>
 
             {/* Start Now Button */}
-            <Link to="/start" className="hidden md:block bg-[#204714] text-white px-5 py-2 rounded-full hover:bg-green-800">
+            <Link to="/dashboard" className="hidden md:block bg-[#204714] text-white px-5 py-2 rounded-full hover:bg-green-800">
               Start Now
             </Link>
           </>
@@ -80,7 +80,7 @@ const Navbar = () => {
           <li><Link to="/about" className="block text-[#204714] hover:text-green-700">About Us</Link></li>
           <li><Link to="/testimonials" className="block text-[#204714] hover:text-green-700">Testimonials</Link></li>
           <li><Link to="/financial-roadmap" className="block text-[#204714] hover:text-green-700">Financial Roadmap</Link></li>
-          <li><Link to="/start" className="block bg-[#204714] text-white px-4 py-2 rounded-lg hover:bg-green-800">Start Now</Link></li>
+          <li><Link to="/dashboard" className="block bg-[#204714] text-white px-4 py-2 rounded-lg hover:bg-green-800">Start Now</Link></li>
         </ul>
       )}
     </nav>
