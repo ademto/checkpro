@@ -19,10 +19,10 @@ export default function About() {
           <img className='rounded-lg' src={finance} alt="" />
         </div>
         <div className='bg-white grid grid-cols-2 gap-5 p-5 rounded-lg'>
-          <span className='bg-[#ebebeb] p-3 rounded-lg'>Beginner-friendly lessons</span>
-          <span className='bg-[#ebebeb] p-3 rounded-lg'>Beginner-friendly lessons</span>
-          <span className='bg-[#ebebeb] p-3 rounded-lg'>Beginner-friendly lessons</span>
-          <span className='bg-[#ebebeb] p-3 rounded-lg'>Beginner-friendly lessons</span>
+          <span className='bg-[#ebebeb] p-3 rounded-lg'>Personalized Roadmap</span>
+          <span className='bg-[#ebebeb] p-3 rounded-lg'>Interactive budgeting tools</span>
+          <span className='bg-[#ebebeb] p-3 rounded-lg'>Expert Advice and Tips</span>
+          <span className='bg-[#ebebeb] p-3 rounded-lg'>Secure and Private</span>
         </div>
         <div className='bg-white rounded-lg p-5'>
           <span className='text-green-700 font-bold text-xl'>Our Mission</span>

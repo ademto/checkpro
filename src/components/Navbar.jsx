@@ -22,7 +22,7 @@ const Navbar = () => {
           <li><Link to="/basics" className="hover:text-green-700">Basics</Link></li>
           <li><Link to="/about" className="hover:text-green-700">About Us</Link></li>
           <li><Link to="/features" className="hover:text-green-700">Features</Link></li>
-          <li><Link to="/" className="hover:text-green-700">Contact</Link></li>
+          <li><Link to="/contact" className="hover:text-green-700">Contact</Link></li>
         </ul>
 
         {/* Right: Login / Signup or User info */}

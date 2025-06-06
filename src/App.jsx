@@ -22,6 +22,7 @@ import BudgetInsight from "./pages/BudgetInsight.jsx";
 import PrivateRoute from "./components/PrivateRoute"; // Import PrivateRoute
 import Layout from "./components/Layout"; 
 import Features from "./pages/Features.jsx";
+import ContactPage from "./pages/Contact.jsx";
 
 function App() {
   return (
@@ -33,7 +34,7 @@ function App() {
             <Route path="/basics" element={<Basics />} />
             <Route path="/about" element={<About />} />
             <Route path="/features" element={<Features />} />
-            <Route path="/testimonials" element={<Testimonials />} />
+            <Route path="/contact" element={<ContactPage />} />
             <Route path="/financial-roadmap" element={<FinancialRoadmap />} />
             <Route path="/name" element={<NameEntryPage />} />
             <Route path="/confirm" element={<ConfirmationPage />} />
