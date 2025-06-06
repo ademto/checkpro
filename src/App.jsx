@@ -21,6 +21,7 @@ import { AuthProvider } from "./context/AuthContext.jsx";
 import BudgetInsight from "./pages/BudgetInsight.jsx";
 import PrivateRoute from "./components/PrivateRoute"; // Import PrivateRoute
 import Layout from "./components/Layout"; 
+import Features from "./pages/Features.jsx";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="/basics" element={<Basics />} />
             <Route path="/about" element={<About />} />
+            <Route path="/features" element={<Features />} />
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/financial-roadmap" element={<FinancialRoadmap />} />
             <Route path="/name" element={<NameEntryPage />} />

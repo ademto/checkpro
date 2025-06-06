@@ -21,7 +21,7 @@ const Navbar = () => {
         <ul className="hidden md:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 gap-10 text-[#204714]">
           <li><Link to="/basics" className="hover:text-green-700">Basics</Link></li>
           <li><Link to="/about" className="hover:text-green-700">About Us</Link></li>
-          <li><Link to="/" className="hover:text-green-700">Features</Link></li>
+          <li><Link to="/features" className="hover:text-green-700">Features</Link></li>
           <li><Link to="/" className="hover:text-green-700">Contact</Link></li>
         </ul>
 
