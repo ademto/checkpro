@@ -24,7 +24,7 @@ const currentYear = new Date().getFullYear();
  
 export function FooterWithSocialLinks() {
   return (
-    <footer className="relative w-full bg-gray-100 pt-10">
+    <footer className="relative w-full bg-[#f1faee] pt-10">
       <div className="mx-auto w-full max-w-7xl px-8">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
           <img src={logo} alt="logo-ct" className="h-30" />

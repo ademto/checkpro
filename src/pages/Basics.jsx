@@ -53,7 +53,7 @@ const tips = [
 
 const Basics = () => {
   return (
-    <div className="max-w-7xl mx-auto py-12 px-6">
+    <div className="max-w-7xl mx-auto py-12 px-6 mt-25">
       {/* Title */}
       <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
         Your financial roadmap to being <br /> financially independent.

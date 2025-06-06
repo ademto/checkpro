@@ -78,3 +78,4 @@ const BudgetInsight = () => {
 };
 
 export default BudgetInsight;
+

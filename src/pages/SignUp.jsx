@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 import logo from '../assets/cheq-logo.png';
 import HeroImg from '../assets/HeroImg.png';
-import { FcGoogle } from "react-icons/fc";
 
-export default function Login() {
+export default function SignUp() {
     return (
         <div className="flex min-h-screen bg-gray-100 justify-center items-center">
             <div className="flex w-full max-w-5xl h-[600px] bg-white rounded-lg shadow-lg overflow-hidden">
@@ -15,8 +14,8 @@ export default function Login() {
                     </Link>
                    <div>
                         <div className='-mt-10'>
-                            <h1 className="text-2xl font-semibold mb-2">Welcome back</h1>
-                            <p className="text-gray-600 text-sm mb-6">Pick up where you left off on your path to financial freedom.</p>
+                            <h1 className="text-2xl font-semibold mb-2">Create Account</h1>
+                            <p className="text-gray-600 text-sm mb-6">Start your journey to smarter money habits. Get access to budgeting tools, learning guides, and a personalized dashboard.</p>
                         </div>
                         
                         <form>
@@ -46,7 +45,7 @@ export default function Login() {
                             </button>
                             <button className='w-full border mt-5 p-2 flex items-center justify-center gap-2'>
                                 <FcGoogle className="text-2xl"/>
-                                Sign In With Google</button>
+                                Sign Up With Google</button>
                         </form>
                    </div>
                     <p className="text-sm mt-4 text-center">

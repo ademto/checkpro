@@ -6,7 +6,9 @@ import About from "./pages/About";
 import Testimonials from "./pages/Testimonials";
 import FinancialRoadmap from "./pages/FinancialRoadmap";
 import Dashboard from "./pages/Dashboard.jsx";
+import Login from "./pages/Login.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
+import SignUp from "./pages/SignUp.jsx";
 import { NameEntryPage } from "./pages/register.jsx";
 import { ConfirmationPage } from "./pages/register.jsx";
 import SignUpPage from "./pages/SignUpPage.jsx";
@@ -18,37 +20,34 @@ import { FooterWithSocialLinks } from "./components/Footer.jsx";
 import { AuthProvider } from "./context/AuthContext.jsx"; 
 import BudgetInsight from "./pages/BudgetInsight.jsx";
 import PrivateRoute from "./components/PrivateRoute"; // Import PrivateRoute
+import Layout from "./components/Layout"; 
 
 function App() {
   return (
-    <AuthProvider> {/* Wrap everything in AuthProvider */}
-      <Navbar />
-      <div className="pt-20"> {/* Add padding to prevent overlap with fixed navbar */}
+    <>
+      
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/basics" element={<Basics />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/testimonials" element={<Testimonials />} />
-          <Route path="/financial-roadmap" element={<FinancialRoadmap />} />
-          <Route path="/name" element={<NameEntryPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/confirm" element={<ConfirmationPage />} />
-          <Route path="/verification" element={<VerificationPage />} />
-          <Route path="/welcome" element={<WelcomeScreen />} />
-          <Route path="/question" element={<SignUpQuestion />} />
-          <Route path="/form" element={<MultiStepForm />} />
-          <Route path="/signup" element={<SignUpPage />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/budget" element={<BudgetInsight />} />
-
-          {/* Protect the dashboard route */}
-          {/* <Route path="/" element={<PrivateRoute />}>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="/basics" element={<Basics />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/testimonials" element={<Testimonials />} />
+            <Route path="/financial-roadmap" element={<FinancialRoadmap />} />
+            <Route path="/name" element={<NameEntryPage />} />
+            <Route path="/confirm" element={<ConfirmationPage />} />
+            <Route path="/verification" element={<VerificationPage />} />
+            <Route path="/welcome" element={<WelcomeScreen />} />
+            <Route path="/question" element={<SignUpQuestion />} />
+            <Route path="/form" element={<MultiStepForm />} />
             <Route path="/dashboard" element={<Dashboard />} />
-          </Route> */}
+            <Route path="/budget" element={<BudgetInsight />} />
+          </Route>
+          <Route path="/login1" element={<LoginPage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup1" element={<SignUpPage />} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
-      </div>
-      <FooterWithSocialLinks />
-    </AuthProvider>
+    </>
   );
 }
 
