@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from '../assets/cheq-logo.png';
 import HeroImg from '../assets/HeroImg.png';
+import { FcGoogle } from "react-icons/fc";
 
 export default function SignUp() {
     return (
